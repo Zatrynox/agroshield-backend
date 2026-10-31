@@ -1,5 +1,7 @@
 # Backend — AgroShield API
 
+[![CI](https://github.com/Zatrynox/agroshield-backend/actions/workflows/ci.yml/badge.svg)](https://github.com/Zatrynox/agroshield-backend/actions/workflows/ci.yml)
+
 API HTTP de AgroShield. Node.js + TypeScript estricto, Fastify 5, Zod, PostgreSQL, migraciones SQL versionadas, Problem Details, OpenAPI y separación DDD/CQRS por contexto.
 
 > Estado: `0.1.0` funcional para demo. No hay `learning`, `community` ni `billing`; no se presentan como operativos.
