@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# builds
+dist/
+coverage/
+*.tsbuildinfo
+
+# environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# local data and demo sensor keys
+.data/
+
+# tooling caches
+.eslintcache
+*.log
+.DS_Store
+Thumbs.db

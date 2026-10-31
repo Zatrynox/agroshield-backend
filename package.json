@@ -1,0 +1,47 @@
+{
+  "name": "@agroshield/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.1.2",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx watch --env-file=.env src/main.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/main.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . && depcruise src --config .dependency-cruiser.cjs",
+    "seed": "tsx --env-file=.env src/tools/seed.ts",
+    "simulate": "tsx --env-file=.env src/tools/sensor-simulator.ts",
+    "migrate": "tsx --env-file=.env src/tools/migrate.ts"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.0",
+    "@fastify/cors": "^10.0.0",
+    "@fastify/helmet": "^13.0.0",
+    "@fastify/rate-limit": "^10.2.0",
+    "@fastify/swagger": "^9.4.0",
+    "@fastify/swagger-ui": "^6.1.2",
+    "@node-rs/argon2": "^2.0.2",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.0",
+    "fastify-type-provider-zod": "4.0.2",
+    "pg": "^8.13.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.2.17",
+    "@types/node": "^22.10.5",
+    "@types/pg": "^8.11.10",
+    "dependency-cruiser": "^16.8.0",
+    "eslint": "^9.17.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.19.0",
+    "vitest": "^2.1.8"
+  }
+}
